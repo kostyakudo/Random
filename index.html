@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #block,
+        #block1,
+        #block2 {
+            width: 150px;
+            height: 150px;
+            position: fixed;
+            left: 100px;
+            top 100px;
+            border: 1px solid black;
+        }
+        
+        #block {
+            background-color: aqua;
+        }
+        
+        #block1 {
+            background-color: indianred;
+        }
+        
+        #block2 {
+            background-color: darkgreen;
+        }
+        
+        body {
+            width: 100%;
+            height: 800px;
+            position: relative;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            setInterval(function () {
+                    var x = Math.floor(Math.random() * (500));
+                    var y = Math.floor(Math.random() * (500));
+                    var x1 = Math.floor(Math.random() * (500));
+                    var y1 = Math.floor(Math.random() * (500));
+                    var x2 = Math.floor(Math.random() * (500));
+                    var y2 = Math.floor(Math.random() * (500));
+
+                    top = 'top:' + y + 'px;';
+                    left = 'left:' + x + 'px;';
+                    top1 = 'top:' + y1 + 'px;';
+                    left1 = 'left:' + x1 + 'px;';
+                    top2 = 'top:' + y2 + 'px;';
+                    left2 = 'left:' + x2 + 'px;';
+                    var block = document.getElementById('block');
+                    var block1 = document.getElementById('block1');
+                    var block2 = document.getElementById('block2');
+                    block.setAttribute('style', left + top);
+                    block1.setAttribute('style', left1 + top1);
+                    block2.setAttribute('style', left2 + top2);
+
+
+
+                },
+                1000);
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="block"></div>
+    <div id="block1"></div>
+    <div id="block2"></div>
+</body>
+
+</html>
